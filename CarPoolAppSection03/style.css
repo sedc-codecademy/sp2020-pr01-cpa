@@ -1,0 +1,34 @@
+    .section03 {
+        width: 414px;
+        height: 896px;        
+        background: linear-gradient(
+        180deg, 
+        rgba(85,128,233,1) 0%, 
+        rgba(132,206,235,1) 25%,
+        rgba(90,184,235,1) 50%,
+        rgba(193,200,228,1) 75%, 
+        rgba(136,96,208,1) 100%)
+    }   
+
+    .cities {
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+    }
+
+    .button {
+        margin: 11px;
+        width: 353px;
+        height: 52px;              
+        border: 1px solid rgba(255,255,255,35);
+        border-radius: 20px;
+        background: linear-gradient(180deg, rgba(96,146,233,1) 0%, rgba(192,199,227,1) 100%);
+        font-family: 'Roboto', sans-serif;
+        font-size: 30pt;
+        color: white;
+    }
+    .button:focus {
+        outline:none;
+        
+    }
+   
