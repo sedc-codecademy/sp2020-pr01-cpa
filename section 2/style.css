@@ -1,0 +1,90 @@
+
+  
+    html{
+        height: 100%;
+    }
+    body {
+        background-color: lightblue;
+        background: linear-gradient(180deg, rgba(85,128,233,1) 0%, rgba(132,206,235,1) 25%, rgba(90,184,235,1) 50%, rgba(193,200,228,1) 75%, rgba(136,96,208,1) 100%);
+        min-height: 100%;
+        font-family: 'Roboto', sans-serif;
+  }
+
+    .btn {
+        background: rgb(96,146,233);
+        background: linear-gradient(180deg, rgba(96,146,233,1) 0%, rgba(192,199,227,1) 100%);
+        border: 1px solid rgba(255,255,255,35);
+        border-radius: 20px;
+        color: white;
+        font-size: 20px;
+    }
+
+    .btn:focus {
+        outline:none;  
+    }
+
+    .logo-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #start-finish{
+        margin: 10px;   
+    } 
+
+    .start-finish-containerr{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .start-btn{
+        width: auto;
+        display: flex;
+        justify-content: space-evenly;
+        height: 52px;
+        margin-bottom: 28px;
+    }
+
+    .finish-btn{
+        width: auto;
+        display: flex;
+        justify-content: space-evenly;
+        height: 52px;
+    }
+
+    .start{
+        margin-top: 28px;
+        height: 52px;
+        width: 352px;
+    }
+
+    .finish{
+        margin-top: 28px;
+        height: 52px;
+        width: 352px;
+    }
+
+
+    .back-filter{
+    display: flex;
+    justify-content: center;
+    margin-top: 76px;
+    }
+
+    
+    .back-btn{
+        text-align: center;
+        width: 86px;
+        height: 76px;
+        margin-right: 29px;
+     
+    }
+
+    .filter-btn{
+        text-align: center;
+        width: 176px;
+        height: 76px;
+     
+    }
