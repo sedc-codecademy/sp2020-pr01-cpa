@@ -38,6 +38,7 @@ backButtonSection2.addEventListener("click", () => {
 searchBtn.addEventListener("click", () => {
     DOMElements.section2.style.display = "none";
     DOMElements.section4.style.display = "block";
+
 });
 
 backButtonSection4.addEventListener("click", () => {
@@ -56,7 +57,7 @@ confirmButton.addEventListener("click", () => {
 });
 
 // citydiv.style.display = "none";
-let gradovi = ["Велес", "Демир Капија","Кавадарци", "Неготино","Свети Николе", "Берово","Виница", "Кочани","М. Каменица", "Пехчево","Пробиштип", "Штип","Дебар", "Кичево", "Македонски Брод", "Охрид","Струга", "Богданци","Валандово", "Гевгелија", "Дојран", "Радовиш", "Струмица","Битола", "Демир Хисар","Крушево", "Прилеп","Ресен", "Гостивар","Тетово", "Кратово","Крива Паланка", "Куманово","Скопје", "Маврово"];
+let gradovi = ["Велес", "Демир Капија","Кавадарци", "Неготино","Свети Николе", "Берово","Виница", "Кочани","М. Каменица", "Пехчево","Пробиштип", "Штип","Дебар", "Кичево", "Македонски Брод", "Охрид","Струга", "Богданци","Валандово", "Гевгелија", "Дојран", "Радовиш", "Струмица","Битола", "Демир Хисар","Крушево", "Прилеп","Ресен", "Гостивар","Тетово", "Кратово","Крива Паланка", "Куманово", "Mаврово", "Скопје"];
 
 let i = 0;
 let j = 0;
@@ -104,15 +105,15 @@ function showCity2(item) {
     DOMElements.section3.style.display = 'none';
 };
 
-const state = {
-    sectionNumber: 5,
-};
+// const state = {
+//     sectionNumber: 5,
+// };
 
 //Done Button logic
 const done = () => {
     DOMElements.section6.style.display = 'none'
     DOMElements.section1.style.display = 'block'
-    state.sectionNumber = 1
+    //state.sectionNumber = 1
 };
 
 //Driver CartBtn logic
@@ -121,19 +122,18 @@ i go pokazuva section6*/
 const showDriverCart = () => {
     DOMElements.section4.style.display = 'none'
     DOMElements.section5.style.display = 'block'
-    state.sectionNumber = 5
+    //state.sectionNumber = 5
 };
 
 // Event Listeners
-DOMElements.backButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        back();
-    });
-});
+// DOMElements.backButtons.forEach(button => {
+//     button.addEventListener('click', () => {
+//         back();
+//     });
+// });
 
 DOMElements.availableRidesButton.forEach(button => {
     button.addEventListener('click', () => {
-        console.log("hi")
         showDriverCart();
     })
 })
