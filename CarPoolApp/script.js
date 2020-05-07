@@ -28,6 +28,7 @@ baramPrevoz.addEventListener("click", () => {
         DOMElements.section2.style.display = "block";
         startCity.innerText = "Град на тргнување";
         endCity.innerText = "Град на пристигнување";
+        peopleData();
 });
 
 backButtonSection2.addEventListener("click", () => {
@@ -141,3 +142,17 @@ DOMElements.availableRidesButton.forEach(button => {
 DOMElements.doneButton.addEventListener('click', () => {
     done();
 });
+
+
+// fetcovi
+
+async function peopleData() {
+    let response = await fetch(`https://github.com/sedc-codecademy/sp2020-pr01-cpa/blob/master/data.json`);
+    data = await response.json();
+    console.log(data);
+    // cosmonautInfo(data.results);
+    // addPagingButtons()
+}
+
+
+
