@@ -15,7 +15,8 @@ const DOMElements = {
     citydiv : document.getElementById("citiesDiv"),
     startCity : document.getElementById("start"),
     endCity : document.getElementById("finish"),
-    loader : document.querySelector(".loader")
+    loader : document.querySelector(".loader"),
+    availableRidesInfo: document.querySelector("#name-time-free-seats")
 }
 
 
@@ -30,31 +31,62 @@ const state = {
 
 //Baram prevoz
 
+//Driver CartBtn logic
+
+const showDriverCart = (rideId) => {
+    console.log(ride);
+    
+    DOMElements.section4.style.display = 'none'
+    DOMElements.section5.style.display = 'block'
+    state.sectionNumber = 5
+}
+
+const showRides = (data) => {
+    DOMElements.availableRidesInfo.innerHTML =""
+    for (const ride of data) {  
+      if(state.startCity === ride.startLocation && state.endCity=== ride.endLocation){
+          console.log(state.startCity);
+          console.log(state.endCity);
+          
+           DOMElements.availableRidesInfo.innerHTML += 
+           `<div class="available-rides-info" onclick="showDriverCart(${ride.id})">
+                <button class="btn available-rides-name available-rides">${ride.firstName} ${ride.lastName}</button>
+                <button class="btn available-rides-time available-rides">${ride.time}</button>
+                <button class="btn available-rides-free-seats available-rides">${ride.freeSeats}</button>
+            </div>`
+      }else {
+          console.log('err');  
+      }
+  }
+    DOMElements.availableRidesInfo.innerHTML += ` 
+        <div class="available-rides-next-prev">
+            <button class="btn next-prev next"><i class='fa fa-angle-double-left'
+                style='font-size:26px'></i></button>
+            <button class="btn next-prev prev"><i class='fa fa-angle-double-right'
+                 style='font-size:26px'></i></button>
+        </div>
+        <div class="available-rides-back">
+            <button class="btn back-btn" id="backBtnSection4" onclick="back()"><i class='fas fa-caret-left' style='font-size:70px'></i></button>
+        </div>`
+}
 
 const searchData = async() => {
     state.sectionNumber = 4
     DOMElements.section2.style.display = "none";
     DOMElements.section4.style.display = "block";
     DOMElements.loader.style.display = "block"
-    const res = await fetch('https://github.com/sedc-codecademy/sp2020-pr01-cpa/blob/ivan-mitev/Json%20data.lnk', {
-        method: 'GET',
-        mode: 'no-cors'
-    })
-    state.data = res;
+    let res = await fetch('https://raw.githubusercontent.com/sedc-codecademy/sp2020-pr01-cpa/ivan-mitev/data.json')
+    state.data =  await res.json()
+    showRides(state.data)
     console.log(state.data);
+    
     DOMElements.loader.style.display = "none"
 }
 
 
 
 
-//Driver CartBtn logic
 
-const showDriverCart = () => {
-    DOMElements.section4.style.display = 'none'
-    DOMElements.section5.style.display = 'block'
-    state.sectionNumber = 5
-}
 
 
 
@@ -126,28 +158,19 @@ const done = () => {
 //-------------------------------------------------------------------
 
 // Event Listeners
- DOMElements.backButtons.forEach(button => {
-     button.addEventListener('click', () => {
-         back();
-     });
-});
-
-DOMElements.availableRidesButton.forEach(button => {
-    button.addEventListener('click', () => {
-        showDriverCart();
-    })
-})
+ 
 
 DOMElements.doneButton.addEventListener('click', () => {
     done();
 });
 
-baramPrevoz.addEventListener("click", () => {
+DOMElements.baramPrevoz.addEventListener("click", () => {
     displaySection2()
 });
 
 DOMElements.searchBtn.addEventListener("click", () => {
     searchData()
+
   });
   
 
@@ -162,3 +185,15 @@ DOMElements.startCity.addEventListener("click" , () => {
 DOMElements.confirmButton.addEventListener("click", () => {
     confirmTrip()
 });
+
+DOMElements.backButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        back();
+    });
+});
+
+DOMElements.availableRidesButton.forEach(button => {
+   button.addEventListener('click', () => {
+       showDriverCart();
+   })
+})
