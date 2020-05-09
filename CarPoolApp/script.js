@@ -16,7 +16,8 @@ const DOMElements = {
     startCity : document.getElementById("start"),
     endCity : document.getElementById("finish"),
     loader : document.querySelector(".loader"),
-    availableRidesInfo: document.querySelector("#name-time-free-seats")
+    availableRidesInfo: document.querySelector("#name-time-free-seats"),
+    driverInfo : document.querySelector(".info-container")
 }
 
 
@@ -28,13 +29,27 @@ const state = {
 
 
 //Functions
-
-//Baram prevoz
-
-//Driver CartBtn logic
-
 const showDriverCart = (rideId) => {
-    console.log(ride);
+    DOMElements.driverInfo.innerHTML = ""
+    state.data.forEach(element => {
+        if(element.id == rideId){
+            DOMElements.driverInfo.innerHTML += `
+            <img class="car-img info-img" src="${element.picture}" alt="car-img">
+            <img class="driver-img info-img" src="driver.jpg" alt="driver-img">
+            <ul class="list">
+                <li>${element.firstName} ${element.lastName}</li>
+                <li>${state.startCityKirilica} - ${state.endCityKirilica}</li>
+                <li>${element.time} h</li>
+                <li>Телефонски број: ${element.phone}</li>
+                <li>Слободни места: ${element.freeSeats}</li>
+            </ul>
+        </div>
+        <div class="buttons-info-container">
+            <button class="btn back-btn" id="backBtnSection5" onclick="back()"><i class='fas fa-caret-left' style='font-size:70px'></i></button>
+            <button class="btn filter-btn" id="confirmBtn" onclick="confirmTrip()">Прифати</button>
+            `
+        }
+    });
     
     DOMElements.section4.style.display = 'none'
     DOMElements.section5.style.display = 'block'
@@ -42,12 +57,11 @@ const showDriverCart = (rideId) => {
 }
 
 const showRides = (data) => {
-    DOMElements.availableRidesInfo.innerHTML =""
+    DOMElements.availableRidesInfo.innerHTML = ""
     for (const ride of data) {  
       if(state.startCity === ride.startLocation && state.endCity=== ride.endLocation){
-          console.log(state.startCity);
-          console.log(state.endCity);
-          
+          //console.log(state.startCity);
+          //console.log(state.endCity);
            DOMElements.availableRidesInfo.innerHTML += 
            `<div class="available-rides-info" onclick="showDriverCart(${ride.id})">
                 <button class="btn available-rides-name available-rides">${ride.firstName} ${ride.lastName}</button>
@@ -78,21 +92,13 @@ const searchData = async() => {
     let res = await fetch('https://raw.githubusercontent.com/sedc-codecademy/sp2020-pr01-cpa/ivan-mitev/data.json')
     state.data =  await res.json()
     showRides(state.data)
-    console.log(state.data);
+    //console.log(state.data);
     
     DOMElements.loader.style.display = "none"
 }
 
 
 
-
-
-
-
-
-
-
-//Ovie funkcii se gotovi------------------------------------------------
 // Izbiranje na Gradovi
 const cityList = (city) =>{
     DOMElements.citydiv.innerHTML = ""
@@ -107,7 +113,7 @@ const showCity = (item, item2)  => {
     state.sectionNumber = 2
     DOMElements.startCity.innerText = item;
     state.startCity = item2
-    console.log(state.startCity);
+    state.startCityKirilica = item
     DOMElements.section2.style.display = "block";
     DOMElements.section3.style.display = "none";
 };
@@ -116,8 +122,7 @@ const showCity2 = (item, item2) => {
     state.sectionNumber = 2
     DOMElements.endCity.innerText = item;
     state.endCity = item2
-    console.log(state.endCity);
-    
+    state.endCityKirilica = item
     DOMElements.section2.style.display = 'block';
     DOMElements.section3.style.display = 'none';
 };
@@ -182,9 +187,9 @@ DOMElements.startCity.addEventListener("click" , () => {
     cityList('showCity');
 });
 
-DOMElements.confirmButton.addEventListener("click", () => {
-    confirmTrip()
-});
+// DOMElements.confirmButton.addEventListener("click", () => {
+//     confirmTrip()
+// });
 
 DOMElements.backButtons.forEach(button => {
     button.addEventListener('click', () => {
