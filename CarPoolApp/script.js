@@ -15,13 +15,14 @@ const DOMElements = {
     citydiv : document.getElementById("citiesDiv"),
     startCity : document.getElementById("start"),
     endCity : document.getElementById("finish"),
+    loader : document.querySelector(".loader")
 }
 
 
 
 
 const state = {
-    gradovi : [["Велес", "Veles"], ["Демир Капија", "Demir Kapija"],["Кавадарци", "Kavadarci"], ["Неготино", "Negotino"],["Свети Николе", "Sveti Nikole"], ["Берово", "Berovo"],["Виница", "Vinica"], ["Кочани", "Kochani"],["М. Каменица", "M. Kamenica"], ["Пехчево", "Pehchevo"],["Пробиштип", "Probishtip"], ["Штип", "Shtip"],["Дебар", "Debar"], ["Кичево", "Kichevo"],[ "Македонски Брод", "Makedonski Brod"], ["Охрид", "Ohrid"],["Струга", "Struga"], ["Богданци", "Bogdanci"],["Валандово", "Valandovo"], ["Гевгелија", "Gevgelija"], ["Дојран", "Dojran"], ["Радовиш", "Radovish"], ["Струмица", "Strumica"],["Битола", "Bitola"],[ "Демир Хисар", "Demir Hisar"],["Крушево", "Krushevo"], ["Прилеп", "Prilep"],["Ресен", "Resen"], ["Гостивар", "Gostivar"],["Тетово", "Tetovo"], ["Кратово", "Kratovo"],["Крива Паланка", "Kriva Palanka"], ["Куманово", "Kumanovo"], ["Mаврово", "Mavrovo"], ["Скопје", "Skopje"]]
+    gradovi : [["Велес", "Veles"], ["Демир Капија", "Demir Kapija"],["Кавадарци", "Kavadarci"], ["Неготино", "Negotino"],["Свети Николе", "Sveti Nikole"], ["Берово", "Berovo"],["Виница", "Vinica"], ["Кочани", "Kochani"],["М. Каменица", "M. Kamenica"], ["Пехчево", "Pehchevo"],["Пробиштип", "Probishtip"], ["Штип", "Shtip"],["Дебар", "Debar"], ["Кичево", "Kichevo"],[ "Македонски Брод", "Makedonski Brod"], ["Охрид", "Ohrid"],["Струга", "Struga"], ["Богданци", "Bogdanci"],["Валандово", "Valandovo"], ["Гевгелија", "Gevgelija"], ["Дојран", "Dojran"], ["Радовиш", "Radovish"], ["Струмица", "Strumica"],["Битола", "Bitola"],[ "Демир Хисар", "Demir Hisar"],["Крушево", "Krushevo"], ["Прилеп", "Prilep"],["Ресен", "Resen"], ["Гостивар", "Gostivar"],["Тетово", "Tetovo"], ["Кратово", "Kratovo"],["Крива Паланка", "Kriva Palanka"], ["Куманово", "Kumanovo"], ["Mаврово", "Mavrovo"], ["Скопје", "Skopje"]],
 };
 
 
@@ -30,10 +31,18 @@ const state = {
 //Baram prevoz
 
 
-const searchData = () => {
+const searchData = async() => {
     state.sectionNumber = 4
     DOMElements.section2.style.display = "none";
     DOMElements.section4.style.display = "block";
+    DOMElements.loader.style.display = "block"
+    const res = await fetch('https://github.com/sedc-codecademy/sp2020-pr01-cpa/blob/ivan-mitev/Json%20data.lnk', {
+        method: 'GET',
+        mode: 'no-cors'
+    })
+    state.data = res;
+    console.log(state.data);
+    DOMElements.loader.style.display = "none"
 }
 
 
