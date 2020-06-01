@@ -1,0 +1,16 @@
+{
+    "users":[
+        {
+            "email": "carpool@email.com",
+            "password": "carpool123"
+        },
+        {
+            "email": "ivannacevski@hotmail.com",
+            "password": "ivan12345"
+        },
+        {
+            "email": "admin@carpool.com",
+            "password": "admincarpool"
+        }
+    ]
+}
