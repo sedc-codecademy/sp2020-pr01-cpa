@@ -1,0 +1,208 @@
+
+body,
+html {
+    background: white;
+    height: 100%;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0px auto;
+    overflow: inherit;
+    background: white;
+}
+
+header {
+    background: url(img/road-clipart-wallpaper-2-original.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    background-position: center;
+    min-height: 450px;
+}
+
+.input-field label {
+    color: #0091ea;
+}
+
+.input-field .prefix {
+    color: #0091ea;
+}
+
+.input-field input[type=text] {
+    border-bottom: 1px solid #0091ea;
+}
+
+.logo {
+    position: static; 
+}
+
+.col.s12>.btn {
+    width: 100%;
+}
+
+.col.s6>.btn {
+    width: 100%;
+}
+
+/* #register {
+    margin-top: 25px;
+}
+
+#sing-in {
+    margin-top: 25px;
+} */
+
+.new-password {
+    margin-top: 10px;
+}
+
+.ride {
+    margin-top: 20px;
+}
+
+.back-sec3 {
+    margin-top: 40px;
+}
+
+#section-login {
+    margin-top: 50px;
+    display: block;
+}
+
+#section1 {
+    margin-top: 50px;
+    display: none;
+}
+
+#section2 {
+    display: none;
+}
+
+#section3 {
+    margin-top: 50px;
+    display: none;
+}
+
+#section4 {
+    display: none;
+}
+
+
+
+.section5 {
+    display: none;
+}
+
+.section8 {
+    display: none;
+}
+
+.span{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+/* .material-icons{
+    display:none;
+} */
+
+.footer{
+    position: fixed;  
+    width: 100%;
+    bottom: 0;  
+    /* background-color: lightskyblue; */
+    z-index: 100;
+}
+@media screen and (max-width: 670px) {
+    header {
+        min-height: 300px;
+        background: url(img/1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+.signIn-section {
+    display: none;
+}
+
+.loginForms {
+    margin-top: 30px;
+}
+
+.register-section {
+    display: none;
+}
+
+.section2Btns {
+    display: flex;
+    justify-content: space-around;
+}
+
+#image-div{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.offerRideCheckbox {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.submitRideBtn {
+    display: flex;
+    align-items: center;
+}
+
+/* profile tabs ++++++++++++++++++++++++++++++++++*/
+.tabs-icon {
+    font-size: 10px;
+    overflow: hidden;
+    color: #0091ea;
+}
+.tabs-icon i {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: -15px;
+    font-size: 24px;
+    color: #0091ea;
+}
+.tabs-icon a.active {
+    background-color: #F3F3F3;    
+}
+/* OVERWRITE MATERIAL CSS MIN WIDTH FOR MOBILE */
+.tabs .tab {
+    min-width: 50px !important
+}
+.tabs .tab-hide {
+      display: none;
+}
+.no-pd {
+    padding: 0 !important
+}
+
+
+/* sidenav css */
+/* // FIX SIDENAV SPACING
+.side-nav li>a {
+  padding: 0 16px;
+}
+/* //FIX SIDEBAR DIVIDERS */
+.side-nav .divider {
+  margin:0;
+  height:8px;
+  border-bottom:1px solid #e0e0e0;
+  background-color: transparent;
+}
+
+#li {
+    margin: 0;
+}
+
+.side-nav li>a {
+    padding: 0 16px;
+  }
