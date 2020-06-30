@@ -29,7 +29,7 @@ searchForRideSectionAllElements.searchRides.addEventListener("click", () => {
   state.endPoint = searchForRideSectionAllElements.endPoint.value
   state.pageNumber = 5;
   getRides();
-  showRides();
+  //showRides();
 
 })
 
