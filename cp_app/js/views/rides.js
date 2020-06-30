@@ -3,7 +3,7 @@ const showRides = (data) => {
       console.log(state.startPoint);
       section3.style.display = "block"
       searchRideResultsSectionAllElements.availableRides.innerHTML = ""
-      for (const ride of data) //javuva error no raboti
+      for (const ride of data) 
       {  
         if(state.startPoint === ride.startLocation && state.endPoint === ride.endLocation && state.dateOfRide === ride.date){
           searchRideResultsSectionAllElements.availableRides.innerHTML += 

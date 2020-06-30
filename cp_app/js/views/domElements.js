@@ -1,5 +1,15 @@
 
-let registerSection = document.querySelector(".register-section"); 
+const registerSectionAllElements = {
+  registerSection : document.querySelector(".register-section"),
+  registerFirstName : document.getElementById("name"),
+  registerLastName : document.getElementById("lastName"),
+  registerPassword : document.getElementById("pass"),
+  registerPhone : document.getElementById("mobile"),
+  registerEmail : document.getElementById("e-mail"),
+  registerBtnForm : document.getElementById("registerBtn"),
+}
+
+
 let offerRideSection = document.getElementById("section4");
 let profileSection = document.getElementById("profile");
 

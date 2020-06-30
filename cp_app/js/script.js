@@ -1,5 +1,9 @@
 
-let state = {}
+let state = {
+  data : []
+}
+
+state.user = new User();
 
 
 homeSectionAllElements.loginBtn.addEventListener('click', () => {
@@ -11,7 +15,8 @@ homeSectionAllElements.loginBtn.addEventListener('click', () => {
 
 singInSectionAllElements.signIn.addEventListener('click', () => {
   state.pageNumber = 2;
-  getUsers();
+  state.user.getUsers();
+  
 });
 
 
@@ -28,8 +33,7 @@ searchForRideSectionAllElements.searchRides.addEventListener("click", () => {
   state.startPoint = searchForRideSectionAllElements.startPoint.value
   state.endPoint = searchForRideSectionAllElements.endPoint.value
   state.pageNumber = 5;
-  getRides();
-  //showRides();
+  showRides(state.data);
 
 })
 
@@ -44,8 +48,16 @@ selectOptionSectionAllElements.offerRide.addEventListener('click', () => {
 })
 
 
-
 homeSectionAllElements.registerBtn.addEventListener('click', () => {
   showRegisterPage();
 })
 
+registerSectionAllElements.registerBtnForm.addEventListener('click', () => {
+  console.log(state.user);
+  state.user.registerUser();
+  state.data.push(state.user)
+  console.log(state.data);
+  
+  console.log(state.user);
+  
+})
