@@ -15,23 +15,8 @@ const showRides = (data) => {
                   <div class="collapsible-body">
                     <ul>
                       <li class="collection-item">
-                        <p>${ride.startLocation} - ${ride.endLocation} </br> ${ride.time}ч. </br> Слободни места: ${ride.freeSeats}</p></br>
-                        <p>Има место за багаж, кола тип авант.</p>
-                        <p>
-                          <label>
-                            <input type="checkbox" checked="checked" disabled="disabled" />
-                            <span>Брзо возење</span>
-                          </label>
-                          <label>
-                            <input type="checkbox" checked="checked" disabled="disabled" />
-                            <span>Со пауза</span>
-                          </label>
-                          <label>
-                            <input type="checkbox" checked="checked" disabled="disabled" />
-                            <span>Климатизирано</span>
-                          </label>
-                        </p>
-                        <a class="btn-small waves-effect waves-light light-blue accent-4">Резервирај</a>
+                        <p>Дестинација: ${ride.startLocation} - ${ride.endLocation} </br> ${ride.time}ч. </br> Контакт Телефон: ${ride.phone}</p></br>
+                        <p>${ride.description}</p>
                       </li>
                     </ul>
                   </div>
