@@ -7,8 +7,12 @@ class User {
     state.data = await response.json();
 
     state.foundUser = state.data.filter(user => user.email === singInSectionAllElements.emailInput.value && user.password == singInSectionAllElements.passwordInput.value)
+    if(state.foundUser.length === 0){
+      alert("Wrong username or password")
+    }else{
 
-    showSelectOptionPage(state.foundUser)
+      showSelectOptionPage(state.foundUser)
+    }
   }
 
   registerUser = () => {
@@ -17,8 +21,14 @@ class User {
     this.password = registerSectionAllElements.registerPassword.value;
     this.phone = registerSectionAllElements.registerPhone.value;
     this.email = registerSectionAllElements.registerEmail.value;   
-      
-    showHomepage();
+    
+    if (state.user.firstName == "" || state.user.lastName == "" || state.user.password == ""|| state.user.phone == ""|| state.user.email == "") {
+      alert("All fields are mandatory ")
+    } else{
+
+      showHomepage();
+      state.page = "home"
+    }
     
   }
 

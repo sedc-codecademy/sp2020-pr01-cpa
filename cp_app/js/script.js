@@ -5,36 +5,24 @@ let state = {
 
 state.user = new User();
 
-
 homeSectionAllElements.loginBtn.addEventListener('click', () => {
-  showLoginPage();
-  state.pageNumber = 1;
+  showLoginPage(); 
 })
 
-
-
 singInSectionAllElements.signIn.addEventListener('click', () => {
-  state.pageNumber = 2;
   state.user.getUsers();
-  
 });
 
-
 selectOptionSectionAllElements.findRide.addEventListener('click', () => {
-  state.pageNumber = 3;
   showSearchPage()
-
 })
 
 
 searchForRideSectionAllElements.searchRides.addEventListener("click", () => {
-  
   state.dateOfRide = searchForRideSectionAllElements.dateOfRide.value
   state.startPoint = searchForRideSectionAllElements.startPoint.value
   state.endPoint = searchForRideSectionAllElements.endPoint.value
-  state.pageNumber = 5;
   showRides(state.data);
-
 })
 
 backButtons.forEach(button => {
@@ -56,8 +44,19 @@ registerSectionAllElements.registerBtnForm.addEventListener('click', () => {
   console.log(state.user);
   state.user.registerUser();
   state.data.push(state.user)
-  console.log(state.data);
-  
+  console.log(state.page);
   console.log(state.user);
   
+})
+
+profileBtn.addEventListener('click', () => {
+  showProfilePage()
+})
+
+sideNavFindRideBtn.addEventListener('click', () => {
+  showSearchPage()
+})
+
+sideNavOfferRideBtn.addEventListener('click', () => {
+  showOfferRideSection()
 })

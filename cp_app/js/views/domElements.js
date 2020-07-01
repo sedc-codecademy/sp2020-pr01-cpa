@@ -11,7 +11,9 @@ const registerSectionAllElements = {
 
 
 let offerRideSection = document.getElementById("section4");
+
 let profileSection = document.getElementById("profile");
+let profileBtn = document.getElementById("profileBtn");
 
 const backButtons = document.querySelectorAll(".back-btn")
 
@@ -56,6 +58,7 @@ const searchRideResultsSectionAllElements = {
   availableRides : document.getElementById('availableRides')
 }
 
+let sideNavFindRideBtn = document.getElementById('sideNavFindRide')
+let sideNavOfferRideBtn = document.getElementById('sideNavOfferRide')
 
-let profileBtn = document.getElementById("profileBtn");
 let aboutApp = document.getElementById("aboutApp");
