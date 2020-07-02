@@ -1,4 +1,3 @@
-
 body,
 html {
     background: white;
@@ -206,3 +205,237 @@ header {
 .side-nav li>a {
     padding: 0 16px;
   }
+
+ .row {
+     margin-top: 20px;
+ } 
+
+ .btn-large {
+     margin-right: 10px;
+ }
+
+.circle{
+    margin-right: 15px;
+}
+.fa-arrow{
+    margin-left: 135px;
+    margin-top: 15px;
+    color: blue;
+}
+
+.loginFieldsContain {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.login-register-header {
+    margin-top: -14px;
+}
+
+
+.profile {
+    display: none;
+}
+
+/* slider */
+
+/* @font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 600;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+  }
+  .txtAnimation {
+    width: 200px;
+    margin-top: 10vh;
+    margin:0;
+    padding:0;
+    background:transparent;
+    font-family: "system";
+    color: #0091ea;
+  }
+  .word {
+    font-size:3em;
+    font-weight:bold;
+    float:left;
+    opacity:0;
+    position:absolute;
+    top:55vh;
+    left:40%;
+  }
+  .w1 {
+    animation: w1anim 20s infinite;
+  }
+  .w2 {
+    animation: w2anim 20s infinite;
+  }
+  .w3 {
+    animation: w3anim 20s infinite;
+  }
+  .w4 {
+    animation: w4anim 20s infinite;
+  }
+  .w5 {
+    animation: w5anim 20s infinite;
+  }
+  @keyframes w1anim {
+    0%{
+      opacity: 0;
+    }
+    10%{
+      opacity: 1;
+    }
+    20% {
+      opacity:0;
+    }
+  }
+  @keyframes w2anim {
+    20%{
+      opacity: 0;
+    }
+    30%{
+      opacity: 1;
+    }
+    40% {
+      opacity:0;
+    }
+  }
+  @keyframes w3anim {
+    40%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    60% {
+      opacity:0;
+    }
+  }
+  @keyframes w4anim {
+    60%{
+      opacity: 0;
+    }
+    70%{
+      opacity: 1;
+    }
+    80% {
+      opacity:0;
+    }
+  }
+  @keyframes w5anim {
+    80%{
+      opacity: 0;
+    }
+    90%{
+      opacity: 1;
+    }
+    100% {
+      opacity:0;
+    }
+  } */
+
+
+  /* new slider */
+
+  /* #text-slider, ul
+{
+    height: 300px;
+}
+#text-slider
+{
+	margin: auto;
+	overflow: hidden;
+	background:#80a8ff;
+	position: relative;
+	max-width: 600px;
+}
+#text-slider li
+{
+	float: left;
+	position: relative;
+	width: 600px;
+	display: inline-block;
+	height: 200px;
+}
+#text-slider ul
+{
+	list-style: none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 9000px;
+	transition: left .3s linear;
+	-moz-transition: left .3s linear;
+	-o-transition: left .3s linear;
+	-webkit-transition: left .3s linear;
+	margin-left: -25px;
+     font-family: century gothic;
+     color: #666;
+}
+
+.text-slider-container
+{
+	margin: 0 auto;
+	padding: 0;
+	width: 550px;
+  min-height: 180px;
+}
+.text-slider-container h4
+{
+  font-family: 'Work sans', sans-serif;
+ 	color: #000;
+  font-weight:400;
+  font-size: 20px;
+}
+.text-slider-container h5 {
+	text-align: right;
+	font-weight:normal;
+	font-family: 'Questrial', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+  color:#EE2D24;
+}
+.text-slider-container  p
+{
+  text-indent: 40px;
+	font-family: 'Questrial', sans-serif;
+	font-size: 15px;
+	color: #434343;
+	line-height: 200%;
+	margin:0 auto 0 auto;
+	margin: 10px 25px;
+	text-align: justify;
+}
+
+@keyframes slide-animation {
+	0% {opacity:0;}
+	2% {opacity:1;}
+	20% {left:0px; opacity:1;}
+	22.5% {opacity:0.6;}
+	25% {left:-600px; opacity:1;}
+	45% {left:-600px; opacity:1;}
+	47.5% {opacity:0.6;}
+	50% {left:-1200px; opacity:1;}
+	70% {left:-1200px; opacity:1;}
+	72.5% {opacity:0.6;}
+	75% {left:-1800px; opacity:1;}
+	95% {opacity:1;}
+	98% {left:-1800px; opacity:0;} 
+	100% {left:0px; opacity:0;}
+}
+ 
+#text-slider ul
+{
+         animation: slide-animation 25s infinite;
+	-webkit-animation: slide-animation 25s infinite;
+}
+use to pause the content on mouse over
+#text-slider ul:hover
+{
+	-moz-animation-play-state: paused;
+	-webkit-animation-play-state: paused;
+} */

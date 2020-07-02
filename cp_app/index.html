@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <title>Document</title>
@@ -18,31 +19,31 @@
     <header id="header">
       <nav class="nav-wraper transparent ">
         <div class="container">
-          <a  class=" brand-logo logo">CarPool</a>
-          <a  class="sidenav-trigger" data-target="mobile-links">
+          <a class=" brand-logo logo">CarPool</a>
+          <a class="sidenav-trigger" data-target="mobile-links">
             <i class="material-icons newMenu" style="display: none;">menu</i>
           </a>
           <ul class="right hide-on-med-and-down">
-            <li><a >Дома</a></li>
-            <li><a >Профил</a></li>
-            <li><a >Барам превоз</a></li>
-            <li><a >Нудам превоз</a></li>
-            <li><a >Одјави се</a></li>
+            <li><a>Дома</a></li>
+            <li><a>Профил</a></li>
+            <li><a>Барам превоз</a></li>
+            <li><a>Нудам превоз</a></li>
+            <li><a>Одјави се</a></li>
           </ul>
         </div>
       </nav>
       <!-- mobile sidenav -->
-      <ul class="sidenav gray lighten-2" id="mobile-links" id="list">
-        <ul class="side-nav blue " id="mobile-demo">
-          <li class="sidenav-header blue">
+      <ul class="sidenav gray lighten-2 menuHover" id="mobile-links" id="list">
+        <!-- <ul class="side-nav blue " id="mobile-demo"> -->
+        <!-- <li class="sidenav-header blue">
             <div class="row">
               <div class="col s4 white-text">
                 <img class="navImg"
                   src="https://gravatar.com/avatar/961997eb7fd5c22b3e12fb3c8ca14e11?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png"
                   width="48px" height="48px" alt="" class="circle responsive-img valign profile-image">
                 <span><b>Боб</b></span>
-          </li>
-          <li class="blue">
+          </li> -->
+        <!-- <li class="blue">
             <ul class="collapsible collapsible-accordion">
               <li>
                 <a class="collapsible-header white-text waves-effect waves-blue "><i
@@ -58,33 +59,76 @@
                 </div>
               </li>
             </ul>
-          </li>
-          <li class="white sidenav-close" id="profileBtn"><a  class="waves-effect waves-blue"><i
-                class="material-icons">account_circle</i>Профил</a></li>
-          <li class="white sidenav-close" id="sideNavFindRide"><a  class="waves-effect waves-blue"><i
-                class="material-icons">airline_seat_recline_normal</i> Барам превоз</a></li>
-          <li class="white sidenav-close" id="sideNavOfferRide"><a  class="waves-effect waves-blue"><i
-                class="material-icons">directions_car</i> Нудам превоз</a></li>
-          <li class="white sidenav-close" id="aboutAppBtn"><a  class="waves-effect waves-blue"><i
-                class="material-icons">announcement
-              </i> За апликацијата</a></li>
-          <li class="white sidenav-close">
-            <div class="divider"></div>
-          </li>
-          <li class="white sidenav-close"><a  class="waves-effect waves-blue"><i
-                class="material-icons">keyboard_backspace</i>Одјави се</a></li>
-        </ul>
+          </li> -->
+        <li class="blue sidenav-close" id="profileBtn"><a class="waves-effect waves-blue white-text" id="profileBtn"><i
+              class="material-icons">account_circle</i>Профил</a></li>
+        <li class="white sidenav-close" id="sideNavFindRide"><a class="waves-effect waves-blue"><i
+              class="material-icons">airline_seat_recline_normal</i> Барам превоз</a></li>
+        <li class="white sidenav-close" id="sideNavOfferRide"><a class="waves-effect waves-blue"><i
+              class="material-icons">directions_car</i> Нудам превоз</a></li>
+        <li class="white sidenav-close" id="aboutAppBtn"><a class="waves-effect waves-blue"><i
+              class="material-icons">announcement
+            </i> За апликацијата</a></li>
+        <li class="white sidenav-close">
+          <div class="divider"></div>
+        </li>
+        <li class="white sidenav-close" id="logOut"><a class="waves-effect waves-blue"><i
+              class="material-icons">keyboard_backspace</i>Одјави се</a></li>
+        <!-- </ul> -->
       </ul>
 
     </header>
     <!-- ---------------------home section ---------------------- -->
     <section class="section" id="homeSection">
       <span class="span">CarPool</span>
-      <div class="login-register footer light-blue accent-5">
+
+      <!-- <div class="txtAnimation">
+        <div class="word w1">Не патувај сам!</div>
+        <div class="word w2">Пронајди си другарче!</div>
+        <div class="word w3">Не патувај сам!</div>
+        <div class="word w4">Пронајди си другарче!</div>
+        <div class="word w5">CarPool</div>
+      </div> -->
+
+      <!-- <div id="text-slider">
+        <ul>
+            <li>
+            <div class="text-slider-container">
+              <h4>Heading text</h4>
+                <p>simple content goes here</p>
+              <h5>may be some Additional heading</h5>
+            </div>
+            </li>
+             <li>
+            <div class="text-slider-container">
+              <h4>Heading text</h4>
+                <p>simple content goes here</p>
+              <h5>may be some Additional heading</h5>
+            </div>
+            </li>
+            
+            <li>
+                <div class="text-slider-container">
+                  <h4>Amazed by the fast, accurate workmanship</h4>
+                  <p>“You guys rock… seriously! Thank you so much for getting all those stamps back to me so fast! Wow!”</p>
+                  <h5>- Tina</h5>
+                </div>
+            </li>     
+            <li>
+                <div class="text-slider-container">
+                  <h4>My stamps are fantastic</h4>
+                  <p>	“I received the stamps this week and they are fantastic. Thanks so much for your work on perfecting them!”</p>
+                  <h5>- Amanda</h5>
+                </div>
+            </li>
+        </ul>
+    </div> -->
+
+      <div class="login-register footer light-blue accent-5 wrapper">
         <div class="row center">
-          <a  class="light-blue accent-4 btn-large waves-effect waves-light col s5 push-s1" id="log-in-btn">
+          <a class="light-blue accent-4 btn-large waves-effect waves-light col s5 push-s1" id="log-in-btn">
             Најави се</a>
-          <a  class="light-blue accent-4 btn-large waves-effect waves-light col s5 offset-s1"
+          <a class="light-blue accent-4 btn-large waves-effect waves-light col s5 offset-s1"
             id="register-btn">Регистрирај се</a>
         </div>
       </div>
@@ -92,79 +136,80 @@
     <!-- section login -->
     <!-- modal da izvesti deka nema takov user ili pass -->
     <section class="signIn-section" style="display: none">
-      <div class="row">
+      <div class="row login-register-header">
         <div>
-          <div class="col s12 l5 offset-l2 light-blue accent-4 white-text input-field ">
-            <i class="material-icons prefix white-text back-btn" id="backSignIn" style="font-size: 4rem;">navigate_before</i><!-- ova kopce treba da se smeni na drgite mesta e okruglo i zeleno i ne e vo hederot-->
+          <div class="col s12 light-blue accent-4 white-text input-field ">
+            <i class="material-icons prefix white-text back-btn" id="backSignIn" style="font-size: 4rem;">navigate_before</i>
+            <!-- ova kopce treba da se smeni na drgite mesta e okruglo i zeleno i ne e vo hederot-->
             <h4 class="center"> Најави се </h4>
           </div>
         </div>
       </div>
       <div class="container loginForms">
         <div class="row content">
-          <div class="col s12 l5 offset-l2 login-fields">
-            
-              <div class="input-field">
-                <i class="material-icons prefix">email</i>
-                <input type="email" id="email">
-                <label for="email">Е-пошта</label>
-              </div>
-              <div class="input-field">
-                <i class="material-icons prefix">lock</i>
-                <textarea id="password" class="materialize-textarea" cols="20" rows="20"></textarea>
-                <label for="password">Лозинка</label>
-                <a >Ја заборавивте лозинката?</a> <!-- Sto treba da se prikaze koga ke se stisne-->
-              </div>
-              <div class="input-field center submit-btns">
-                <button class="btn light-blue accent-4" id="signIn">Најави се</button>
-              </div>
-            
+          <div class="col s12 login-fields loginFieldsContain">
+
+            <div class="input-field">
+              <i class="material-icons prefix">email</i>
+              <input type="email" id="email">
+              <label for="email">Е-пошта</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">lock</i>
+              <input type="password" id="password"  >
+              <label for="password">Лозинка</label>
+              <a>Ја заборавивте лозинката?</a> 
+            </div>
+            <div class="input-field center submit-btns">
+              <button class="btn light-blue accent-4" id="signIn">Најави се</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- register section -->
     <section class="register-section">
-      <div class="row">
+       <div class="row login-register-header">
         <div>
-          <div class="col s12 l5 offset-l2 light-blue accent-4 white-text input-field">
-            <i class="material-icons prefix white-text back-btn" id="backRegister" style="font-size: 4rem;">navigate_before</i><!-- ova kopce treba da se smeni na drgite mesta e okruglo i zeleno i ne e vo hederot-->
-            <h4 class="center">Регистрација</h4>
+          <div class="col s12 light-blue accent-4 white-text input-field ">
+            <i class="material-icons prefix white-text back-btn" id="backRegister" style="font-size: 4rem;">navigate_before</i>
+            <!-- ova kopce treba da se smeni na drgite mesta e okruglo i zeleno i ne e vo hederot-->
+            <h4 class="center"> Регистрација </h4>
           </div>
         </div>
       </div>
       <div class="container">
         <div class="row content">
-          <div class="col s12 l5 offset-l2 login-fields">
+          <div class="col s12 login-fields">
             <!-- <form> -->
-              <div class="input-field">
-                <i class="material-icons prefix">account_box</i>
-                <input type="text" id="name">
-                <label for="name">Име</label>
-              </div>
-              <div class="input-field">
-                <i class="material-icons prefix">account_box</i>
-                <input type="text" id="lastName">
-                <label for="lastName">Презиме</label>
-              </div>
-              <div class="input-field">
-                <i class="material-icons prefix">lock</i>
-                <input type="password" id="pass">
-                <label for="pass">Лозинка</label>
-              </div>
-              <div class="input-field">
-                <i class="material-icons prefix">smartphone</i>
-                <input type="number" id="mobile">
-                <label for="mobile">Телефонски број</label>
-              </div>
-              <div class="input-field">
-                <i class="material-icons prefix">email</i>
-                <input type="email" id="e-mail">
-                <label for="e-mail">Е-пошта</label>
-              </div>
-              <div class="input-field center submit-btns">
-                <button class="btn light-blue accent-4" id="registerBtn"> Регистрирај се</button>
-              </div>
+            <div class="input-field">
+              <i class="material-icons prefix">account_box</i>
+              <input type="text" id="name">
+              <label for="name">Име</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">account_box</i>
+              <input type="text" id="lastName">
+              <label for="lastName">Презиме</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">lock</i>
+              <input type="password" id="pass">
+              <label for="pass">Лозинка</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">smartphone</i>
+              <input type="number" id="mobile">
+              <label for="mobile">Телефонски број</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">email</i>
+              <input type="email" id="e-mail">
+              <label for="e-mail">Е-пошта</label>
+            </div>
+            <div class="input-field center submit-btns">
+              <button class="btn light-blue accent-4"> Регистрирај се</button>
+            </div>
             <!-- </form> -->
           </div>
         </div>
@@ -174,11 +219,11 @@
     <section class="section container" id="section1">
       <div class="row">
         <div class="col s12 m6 ride">
-          <a  class="btn waves-effect waves-light light-blue accent-4" id="offer-ride"><i
+          <a class="btn waves-effect waves-light light-blue accent-4" id="offer-ride"><i
               class="material-icons left">directions_car</i>Нудам Превоз</a>
         </div>
         <div class="col s12 m6 ride">
-          <a  class="btn waves-effect waves-light light-blue accent-4" id="find-ride"><i
+          <a class="btn waves-effect waves-light light-blue accent-4" id="find-ride"><i
               class="material-icons left">directions_walk</i>Барам Превоз</a>
         </div>
       </div>
@@ -218,24 +263,24 @@
       </div>
       <div class="row">
         <div class="section2Btns">
-          <a  class="btn-floating btn-large waves-effect waves-light red"><i
+          <a class="btn-floating btn-large waves-effect waves-light red"><i
               class="material-icons green accent-4 back-btn">arrow_back</i></a>
-          <a  class="btn-floating btn-large waves-effect waves-light blue" id="searchRides"><i
+          <a class="btn-floating btn-large waves-effect waves-light blue" id="searchRides"><i
               class="material-icons">search</i></a>
         </div>
       </div>
     </section>
     <!-- ---------------------section3---------------------- -->
     <section class="section container" id="section3">
-      <div class="row" >
-         <div class="col s12">
+      <div class="row">
+        <div class="col s12">
           <ul class="collapsible" id="availableRides">
           </ul>
-        </div> 
+        </div>
       </div>
       <div class="row">
         <div class="center">
-          <a  class="btn-floating btn-large waves-effect waves-light red"><i
+          <a class="btn-floating btn-large waves-effect waves-light red"><i
               class="material-icons green accent-4 back-btn">arrow_back</i></a>
         </div>
       </div>
@@ -246,55 +291,57 @@
     <section class="section4 container" id="section4">
       <div class="container">
         <div class="row content">
-          <div class="col s12 l5 offset-l2 login-fields">
+          <div class="col s12 login-fields">
             <!-- <form> -->
-              <div class="row">
-                <div class="col s12">
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <i class="material-icons prefix">location_on_outline</i>
-                      <input type="text" id="start-point" class="autocomplete-start">
-                      <label for="start-point">Град на тргнување</label>
-                    </div>
+            <div class="row">
+              <div class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">location_on_outline</i>
+                    <input type="text" id="start-point" class="autocomplete-start">
+                    <label for="start-point">Град на тргнување</label>
                   </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col s12">
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <i class="material-icons prefix">location_on</i>
-                      <input type="text" id="end-point" class="autocomplete-end">
-                      <label for="end-point">Град на пристигнување</label>
-                    </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">location_on</i>
+                    <input type="text" id="end-point" class="autocomplete-end">
+                    <label for="end-point">Град на пристигнување</label>
                   </div>
                 </div>
               </div>
-              <div class="input-field">
-                <i class="material-icons prefix">query_builder</i>
-                <input type="text" id="lastName">
-                <label for="lastName"> Време </label>
-              </div>
-              <div class="input-field">
-                <i class="material-icons prefix">supervisor_account</i>
-                <input type="number" id="mobile">
-                <label for="mobile"> Слободни места </label>
-              </div>
-              <div class="input-field">
-                <i class="material-icons prefix">message</i>
-                <input type="text" id="name">
-                <label for="name"> Објаснување </label>
-              </div>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">query_builder</i>
+              <input type="text" id="lastName">
+              <label for="lastName"> Време </label>
+            </div>
+            
+            <div class="input-field">
+              <i class="material-icons prefix">calendar_today</i>
+              <input type="text" id="date" class="datepicker">
+              <label for="date">Датум на тргнување</label>
+            </div>
+            
+            <div class="input-field">
+              <i class="material-icons prefix">message</i>
+              <input type="text" id="name">
+              <label for="name"> Објаснување </label>
+            </div>
             <!-- </form>
             <form> -->
-              <table>
+            <!-- <table>
                 <tbody>
                   <tr>
                     <td>
                       <div class="offerRideCheckbox">
-                        <p>
-                          <!-- samo po edno checkbox za sekoja opcija -->
-                          <label>
+                        <p> -->
+            <!-- samo po edno checkbox za sekoja opcija -->
+            <!-- <label>
                             <input type="checkbox" />
                             <span>Дозволено пушење</span>
                           </label>
@@ -423,14 +470,14 @@
                     </td>
                   </tr>
                 </tbody>
-              </table>
-              <div class="input-field center submit-btns section2Btns">
-                <a  class="btn-floating btn-large waves-effect waves-light red"><i
-                    class="material-icons green accent-4 back-btn">arrow_back</i></a>
-                <div class="submitRideBtn">
-                  <button class="btn btn-large light-blue accent-4"> Submit </button>
-                </div>
+              </table> -->
+            <div class="input-field center submit-btns section2Btns">
+              <a class="btn-floating btn-large waves-effect waves-light red"><i
+                  class="material-icons green accent-4 back-btn">arrow_back</i></a>
+              <div class="submitRideBtn">
+                <button class="btn btn-large light-blue accent-4">Потврди</button>
               </div>
+            </div>
           </div>
           <!-- </form> -->
         </div>
@@ -438,165 +485,80 @@
   </div>
   </section>
   <!-- ---------------------section7?????????---------------------- -->
-  <section class="section5 container" id="profile"><!-- isto id dva pati-->
-    <div class="section5 container" > <!-- isto id dva pati -->
-      <div class="col s12 m4 center-align blue-text" id="image-div">
-        <img class="materialboxed" width="150" src="img/avatar.png">
-      </div>
-      <!-- tuka na tabovite da se smeni bojata, da ne bidi crvena na teksto i na selektiranio tab -->
-      <div class="row">
-        <div class="col s12 no-pd">
-          <ul class="tabs tabs-icon">
-            <li class="tab col s3"><a href="#test1"><i class="material-icons">person</i></a></li>
-            <li class="tab col s3"><a href="#test2"><i class="material-icons">directions_car</i></a></li>
-            <li class="tab col s3"><a href="#test3"><i class="material-icons">airline_seat_recline_normal</i></a></li>
-            <li class="tab col s3"><a href="#test4"><i class="material-icons">notifications</i></a></li>
-          </ul>
-        </div>
-        <!-- информации за профил -->
-        <div id="test1" class="col s12"><a href="#test2">
-            <ul class="collection with-header blue-text">
-              <li class="collection-item">
-                <p><b>Име Презиме</b>
-                  <hr>Боб Бобски</p>
-                <i class="material-icons">settings</i>
-              </li>
-              <li class="collection-item">
-                <p><b>Контакт информации</b>
-                  <hr>
-                  <i class="material-icons">phone_iphone</i>
-                  075 555 555<br>
-                  <i class="material-icons">email</i>
-                  bobsky@mail.com
-                </p>
-                <i class="material-icons">settings</i>
-              </li>
-            </ul>
-          </a></div>
-        <!-- информации за понуден превоз -->
-        <div id="test2" class="col s12"><a href="#test3">
-            <ul class="collection blue-text">
-              <li class="collection-item">
-                <p>Тетово - Куманово </br> 11:00ч. </br> Слободни места: 3</p></br>
-                <p>Има место за багаж, кола тип авант.</p>
-                <p>
-                  <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Брзо возење</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Со пауза</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Климатизирано</span>
-                  </label>
-                </p>
-                <i class="material-icons">settings</i>
-              </li>
-              <li class="collection-item">
-                <p>Тетово - Куманово </br> 11:00ч. </br> Слободни места: 3</p></br>
-                <p>Има место за багаж, кола тип авант.</p>
-                <p>
-                  <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Брзо возење</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Со пауза</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Климатизирано</span>
-                  </label>
-                </p>
-                <i class="material-icons">settings</i>
-              </li>
-              <li class="collection-item">
-                <p>Тетово - Куманово </br> 11:00ч. </br> Слободни места: 3</p></br>
-                <p>Има место за багаж, кола тип авант.</p>
-                <p>
-                  <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Брзо возење</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Со пауза</span>
-                  </label>
-                  <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Климатизирано</span>
-                  </label>
-                </p>
-                <i class="material-icons">settings</i>
-              </li>
-            </ul>
+  <section class="section5 profile" id="profile">
+    <div class="row login-register-header">
+      <div>
+        <div class="col s12 light-blue accent-4 white-text input-field ">
+          <i class="material-icons prefix white-text back-btn"  style="font-size: 4rem;">navigate_before</i>
+          <h4 class="center"> Профил </h4>
         </div>
       </div>
     </div>
-    </a></div>
-    <!-- информации за прифатен превоз -->
-    <div id="test3" class="col s12"><a href="#test4">
-        <ul class="collection blue-text">
-          <li class="collection-item avatar">
-            <img src="img/avatar.png" alt="" class="circle">
-            <span class="title">Петок 13.03.2020</span>
-            <p>Битола - Скопје </br>
-              11:00ч.
-            </p>
-            <a href="#!" class="secondary-content"><i class="material-icons">check</i></a>
-          </li>
-          <li class="collection-item avatar">
-            <img src="img/avatar.png" alt="" class="circle">
-            <span class="title">Сабота 01.02.2020</span>
-            <p>Скопје - Битола </br>
-              14:30ч.
-            </p>
-            <a  class="secondary-content"><i class="material-icons">check</i></a>
-          </li>
-          <li class="collection-item avatar">
-            <img src="img/man.png" alt="" class="circle">
-            <span class="title">Понеделник 20.06.2020</span>
-            <p>Охрид - Струга </br>
-              10:30ч.
-            </p>
-            <a class="secondary-content"><i class="material-icons">remove</i></a>
-          </li>
-        </ul>
-      </a></div>
-    <!-- нотификации -->
-    <div id="test4" class="col s12"><a href="#test1">
-        <ul class="collection with-header blue-text">
-          <li class="collection-item">
-            <div>Боб Бобски го прифати твоето барање за патување<a href="#!" class="secondary-content"><i
-                  class="material-icons">send</i></a></div>
-          </li>
-          <li class="collection-item">
-            <div>Грег Грегски ти испрати барање за патување<a href="#!" class="secondary-content"><i
-                  class="material-icons">send</i></a></div>
-          </li>
-          <li class="collection-item">
-            <div>Подсетник за патување во среда<a href="#!" class="secondary-content"><i
-                  class="material-icons">send</i></a></div>
-          </li>
-          <li class="collection-item">
-            <div>Боб Бобски го прифати твоето барање за патување<a href="#!" class="secondary-content"><i
-                  class="material-icons">send</i></a></div>
-          </li>
-        </ul>
-      </a></div>
+    <div class="container" id="profile-form">
+      <!-- <div class="input-field" >
+        <i class="material-icons prefix">account_box</i>
+        <input type="text" id="name" value="Pane">
+        <label for="name">Име</label>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">account_box</i>
+        <input type="text" id="lastName">
+        <label for="lastName">Презиме</label>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">smartphone</i>
+        <input type="number" id="mobile">
+        <label for="mobile">Телефонски број</label>
+      </div>
+      <div class="input-field">
+        <i class="material-icons prefix">email</i>
+        <input type="email" id="e-mail">
+        <label for="e-mail">Е-пошта</label>
+      </div> -->
+      <!-- <div class="input-field center submit-btns">
+        <button class="btn light-blue accent-4 back-btn" id="signIn">Зачувај измени</button>
+      </div> -->
     </div>
   </section>
-  <section class="section8 container" id="aboutApp">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Assumenda nihil, est velit laborum incidunt explicabo corrupti
-      placeat nam maiores quo blanditiis eos soluta provident animi
-      temporibus doloribus pariatur quos dicta. </p>
+  <section class="section8" id="aboutApp">
+    <div class="row login-register-header">
+      <div>
+        <div class="col s12 light-blue accent-4 white-text input-field ">
+          <i class="material-icons prefix white-text back-btn" style="font-size: 4rem;">navigate_before</i>
+          <h4 class="center"> За апликацијата </h4>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+    <p>Апликацијата CarPool e изработена од група студенти на СЕДЦ Академија за програмирање.<br> Оваа апликација е
+      создадена се со цел да им помогне на луѓето кои често патуваат помеѓу градови во
+      Македонија. Нашата основна мисија е да овозможиме полесен начин за комуникација и организирање на заеднички
+      превоз.</p>
+    <h5>Како да објавам понуда?</h5>
+    <p>Едноставно кликнете на копчето Додај Понуда и внесете ги вашите податоци. Апликацијата веднаш
+      ќе ја прикаже вашата понуда во активни понуди, и соодветно ќе ви извести сите корисници на дадената релација за
+      вашата понуда.</p>
+    <h5>Како да резервирам место?</h5>
+    <p>Засега, единствен начин е да го искомуницирате корисникот директно со повик или порака. Во
+      наредните верзии од апликацијата ќе биде понуда и друга опција.</p>
+    <h5>НАПОМЕНА</h5>
+    <p>Со користење на оваа апликација се согласувате дека креаторите на оваа апликација не
+      превземаат никаква одговорност во случај на било каков спор. Исто така, со користење на апликацијата, се
+      согласувате со условите за користење</p>
+    </div>
   </section>
   </div>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+  <!-- Compiled and minified JavaScript -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="materializeJquery.js"></script>
+  <script src="./js/views/domElements.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/models/Login.js"></script>
+  <script src="./js/views/navView.js"></script>
+  <script src="./js/models/Rides.js"></script>
+  <script src="./js/views/rides.js"></script> -->
+
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -605,8 +567,9 @@
   <script src="./js/models/User.js"></script>
   <script src="./js/script.js"></script>
   <script src="./js/views/navView.js"></script>
-
+  <script src="./js/views/profile.js"></script>
   <script src="./js/views/rides.js"></script>
+
 </body>
 
 </html>

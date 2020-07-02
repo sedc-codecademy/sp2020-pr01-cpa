@@ -64,7 +64,32 @@ const back = () =>{
     headerSectionAllElements.headerSection.style.display = 'block'
     state.page = "home"
   }
+  else if (state.page == "profile"){
+    headerSectionAllElements.headerSection.style.display = "block";
+    selectOptionSectionAllElements.selectOptionSection.style.display = "block";
+    profile.style.display = "none";
+    state.page = "options"
+  }
+  else if (state.page == "about"){
+    headerSectionAllElements.headerSection.style.display = "block";
+    selectOptionSectionAllElements.selectOptionSection.style.display = "block";
+    aboutAppSection.style.display = "none";
+    state.page = "options"
+  }
 };
+
+const logOut = () => {
+  
+  headerSectionAllElements.headerSection.style.display = "block";
+  selectOptionSectionAllElements.selectOptionSection.style.display = "none";
+  headerSectionAllElements.hamburgerMenu.style.display = 'none';
+  aboutAppSection.style.display = "none";
+  searchForRideSectionAllElements.searchForRideSection.style.display = 'none'
+  searchRideResultsSectionAllElements.searchRideResultsSection.style.display = 'none'
+  offerRideSection.style.display  = 'none'
+  homeSectionAllElements.homeSection.style.display = 'block'
+
+} 
 
 const showRegisterPage = () => {
   state.page = "register"
@@ -81,11 +106,10 @@ const showHomepage = () => {
     registerSectionAllElements.registerSection.style.display = 'none'
 }
 
-const showProfilePage = () => {
-  state.page = "profile"
-  profileSection.style.display = 'block'
-  offerRideSection.style.display = 'none'
-  searchForRideSectionAllElements.searchForRideSection.style.display = 'none'
-  selectOptionSectionAllElements.selectOptionSection.style.display = 'none'
-  searchRideResultsSectionAllElements.searchRideResultsSection.style.display = 'none'
+const showAboutPage = () => {
+  state.page = "about"
+  headerSectionAllElements.headerSection.style.display = "none";
+  selectOptionSectionAllElements.selectOptionSection.style.display = "none";
+  aboutAppSection.style.display = "block";
 }
+

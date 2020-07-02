@@ -14,6 +14,7 @@ let offerRideSection = document.getElementById("section4");
 
 let profileSection = document.getElementById("profile");
 let profileBtn = document.getElementById("profileBtn");
+let profileForm = document.getElementById("profile-form")
 
 const backButtons = document.querySelectorAll(".back-btn")
 
@@ -61,4 +62,9 @@ const searchRideResultsSectionAllElements = {
 let sideNavFindRideBtn = document.getElementById('sideNavFindRide')
 let sideNavOfferRideBtn = document.getElementById('sideNavOfferRide')
 
-let aboutApp = document.getElementById("aboutApp");
+
+let aboutAppBtn = document.getElementById("aboutAppBtn");
+let backAplication = document.getElementById("backAplication");
+let aboutAppSection = document.querySelector(".section8");
+
+let logOutBtn = document.getElementById("logOut");

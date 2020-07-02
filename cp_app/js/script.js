@@ -1,4 +1,3 @@
-
 let state = {
   data : []
 }
@@ -40,17 +39,9 @@ homeSectionAllElements.registerBtn.addEventListener('click', () => {
   showRegisterPage();
 })
 
-registerSectionAllElements.registerBtnForm.addEventListener('click', () => {
-  console.log(state.user);
-  state.user.registerUser();
-  state.data.push(state.user)
-  console.log(state.page);
-  console.log(state.user);
-  
-})
 
 profileBtn.addEventListener('click', () => {
-  showProfilePage()
+  showProfilePage(state.foundUser)
 })
 
 sideNavFindRideBtn.addEventListener('click', () => {
@@ -59,4 +50,15 @@ sideNavFindRideBtn.addEventListener('click', () => {
 
 sideNavOfferRideBtn.addEventListener('click', () => {
   showOfferRideSection()
+})
+
+
+aboutAppBtn.addEventListener("click", () => {
+  showAboutPage();
+})
+
+
+logOutBtn.addEventListener("click", () => {
+  logOut();
+
 })

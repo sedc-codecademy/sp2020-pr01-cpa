@@ -3,10 +3,12 @@ const showRides = (data) => {
     searchForRideSectionAllElements.searchForRideSection.style.display = 'none'
       console.log(state.startPoint);
       section3.style.display = "block"
+      let hasRide = false;
       searchRideResultsSectionAllElements.availableRides.innerHTML = ""
       for (const ride of data) 
       {  
         if(state.startPoint === ride.startLocation && state.endPoint === ride.endLocation && state.dateOfRide === ride.date){
+          hasRide = true;
           searchRideResultsSectionAllElements.availableRides.innerHTML += 
               ` <li>
                   <div class="collapsible-header collection-item avatar"><img src="${ride.picture}" alt="" class="circle"
@@ -24,5 +26,7 @@ const showRides = (data) => {
               </li>`  
         }
     }
-    //da se dodade innerHtml za koga nema da najde prevoz
+    if(!hasRide){
+      searchRideResultsSectionAllElements.availableRides.innerHTML += "Нема превоз за таа дестинација"
+    }
   }
