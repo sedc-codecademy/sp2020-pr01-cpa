@@ -1,0 +1,42 @@
+[
+    {
+      "email": "ivan@mail.com",
+      "password": 123456,
+      "firstName": "Ivan",
+      "lastName": "Mitev",
+      "phone": "+1 (903) 402-3494",
+      "car": "Kia",
+      "picture": "img/avatar.png",
+      "startLocation": "Shtip",
+      "endLocation": "Skopje",
+      "date": "30-06-2020",
+      "time": "01:00",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat convallis magna ac elementum."
+    },
+    {
+      "email": "kate@mail.com",
+      "password": 123456,
+      "firstName": "Katerina",
+      "lastName": "Atanasovska",
+      "phone": "+1 (942) 413-2927",
+      "picture": "img/avatar (1).png",
+      "startLocation": "Veles",
+      "endLocation": "Struga",
+      "date": "03-07-2020",
+      "time": "15:30",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat convallis magna ac elementum."
+    },
+    {
+      "email": "radmila@mail.com",
+      "password": 123456,
+      "firstName": "Radmila",
+      "lastName": "Kostovska",
+      "phone": "+1 (809) 516-3745",
+      "picture": "img/avatar (1).png",
+      "startLocation": "Shtip",
+      "endLocation": "Skopje",
+      "date": "30-06-2020",
+      "time": "16:30",
+      "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat convallis magna ac elementum."
+    }
+]
